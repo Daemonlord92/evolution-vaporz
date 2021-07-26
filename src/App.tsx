@@ -24,6 +24,7 @@ import {
 import './App.css';
 
 import Home from './components/Homepage/home';
+import Twitter from './components/twitter-feed/twitter';
 
 function App() {
  const [activeTab, setActiveTab] = useState('1');
@@ -78,16 +79,18 @@ function App() {
               </NavLink>
             </NavItem>
           </Nav>
-          <Col md="4">
-
-          </Col>
-          <Col md="8">
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-            </Switch>
-          </Col>
+          <Row>
+            <Col md="4">
+              <Twitter />
+            </Col>
+            <Col md="8">
+              <Switch>
+                <Route exact path="/">
+                  <Home />
+                </Route>
+              </Switch>
+            </Col>
+          </Row>
       </Container>
     </Router>
   );
