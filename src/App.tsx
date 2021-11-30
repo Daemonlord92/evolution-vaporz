@@ -24,6 +24,7 @@ import {
 import './App.css';
 
 import Home from './components/Homepage/home';
+import Ejuice from './components/e-juice/ejuice';
 import Twitter from './components/twitter-feed/twitter';
 
 function App() {
@@ -37,13 +38,12 @@ function App() {
         </Jumbotron>
         <Nav tabs style={{justifyContent: 'center'}}>
             <NavItem >
-              <NavLink to="/">
+              <NavLink href="/">
               Home
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink 
-              >
+              <NavLink href="/e-juice">
               E-Juice
               </NavLink>
             </NavItem>
@@ -74,6 +74,9 @@ function App() {
               <Switch>
                 <Route exact path="/">
                   <Home />
+                </Route>
+                <Route exact path="/e-juice">
+                  <Ejuice />
                 </Route>
               </Switch>
             </Col>
